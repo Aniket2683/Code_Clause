@@ -1,0 +1,31 @@
+#cv-form{
+    display: block;
+    background-color: rgb(240, 255, 245);
+}
+
+.font{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.heading{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.para{
+    font-family:cursive ;
+}
+
+
+#cv-template{
+    display: none;
+}
+
+.myimg{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 250px;
+}
+
+.background{
+    background-color: #d49d9d;
+}

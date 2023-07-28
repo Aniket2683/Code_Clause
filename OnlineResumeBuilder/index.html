@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+   <head>
+    <title>Online Resume Generator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <!--CV FORM  -->
+     <div class="conatainer" id="cv-form">
+        <h1 class="text-center my-2 heading">RESUME GENERATOR</h1>
+        <p class="text-center my-auto para">By Aniket Ramker Jaiswal</p>
+
+        <div class="row mx-1" >
+            <div class="col-md-6">
+                <!-- first col covering 6 grid of row -->
+                <h3 class="text-center font ">Personal Information</h3>
+                <div class="form-group">
+                  <label for="nameField" style="font-family: monospace;">Your Name</label>
+                  <input 
+                  type="text" 
+                  id="nameField" 
+                  placeholder="Enter Full-Name here...." 
+                  class="form-control"
+                 />
+                </div>
+
+                <div class="form-group mt-2">
+                  <label for="contactField" style="font-family: monospace;">Conatct details</label>
+                  <input
+                  type="text" 
+                  id="contactField"
+                  placeholder="Enter Phone-Number here...."
+                  class="form-control" />
+                </div>
+
+                <div class="form-group mt-2">
+                  <label for="" style="font-family: monospace;">Select a Profile Photo</label>
+                  <input id="imgField" type="file" class="form-control">
+
+                </div>
+
+
+
+
+                <div class="form-group mt-3">
+                  <label for="addressField" style="font-family: monospace;">Address details</label>
+                  <textarea 
+                  type="text" 
+                  id="addressField"
+                  placeholder="Enter Adderss here...." 
+                  class="form-control"
+                  rows="3"
+                  ></textarea>
+                </div>
+
+
+                <p class="text-secondary mx-2 mt-4" >Important Links</p>
+
+
+                <div class="form-group mt-2">
+                  <label for="emailField" style="font-family: monospace;">Email Address</label>
+                  <input 
+                  type="text" 
+                  id="emailField" 
+                  placeholder="Enter Your Email Address here...." 
+                  class="form-control" />
+                </div>
+
+
+                <div class="form-group mt-2">
+                  <label for="linkedField" style="font-family: monospace;">LinkedIn URL</label>
+                  <input 
+                  type="text" 
+                  id="linkedField" 
+                  placeholder="Enter Linkedin URL here...." 
+                  class="form-control" />
+                </div>
+
+
+                <div class="form-group mt-3">
+                  <label for="hobbiesField" style="font-family: monospace;">Hobbies</label>
+                  <textarea type="text" 
+                  id="hobbiesField" 
+                  placeholder="Enter Your Hobbies here...." 
+                  class="form-control"
+                  rows="1"></textarea>
+                </div>
+
+
+
+            </div>
+
+
+
+            <div class="col-md-6">
+                <!-- second col covering 6 grids of row -->
+                <h3 class="text-center font">Professional Information</h3>
+
+
+                <div class="form-group mt-2">
+                  <label for="objField" style="font-family: monospace;">Personal Objective</label>
+                  <textarea 
+                  type="text" 
+                  id="objField" 
+                  placeholder="Enter your Personal objective here...." 
+                  class="form-control" 
+                  ></textarea>
+                </div>
+
+
+                <div class="form-group mt-2" id="aqField">
+                  <label for="" style="font-family: monospace;">Academic Qualifications</label>
+                  <textarea type="text" 
+                  placeholder="Enter your Academic qualifications details here...."
+                  class="form-control aqField"
+                  rows="2"></textarea>
+
+                  <!-- New Dynamic textareas -->
+                
+                  <div class="containe text-center mt-2" id="aqAddButton">
+                    <button onclick="addNewAQField()"class="btn btn-primary btn-sm">Add More</button>
+                  </div>
+                </div>
+
+                
+                <div class="form-group mt-2"  id="weField" >
+                  <label for="" style="font-family: monospace;">Work Experience/Internships</label>
+                  <textarea 
+                  type="text" 
+                  placeholder="Enter your Work experience details here...."
+                  class="form-control weField"
+                 rows="2"></textarea>
+
+                  <div class="containe text-center mt-2" id="weAddButton">
+                    <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add More</button>
+                  </div>
+                </div>
+
+
+                <div class="form-group mt-2" id="pdField">
+                  <label for="" style="font-family: monospace;">Projects</label>
+                  <textarea 
+                  type="text"  
+                  placeholder="Enter your Project details here...."
+                  class="form-control pdField"
+                  rows="2"></textarea>
+                
+                  <div class="containe text-center mt-2" id="pdAddButton">
+                    <button onclick="addNewPDField()" class="btn btn-primary btn-sm">Add More</button>
+                  </div>
+                </div>
+
+
+                <div class="form-group mt-2">
+                  <label for="skillField" style="font-family: monospace;">Skills</label>
+                  <textarea 
+                  type="text" 
+                  id="skillField" 
+                  placeholder="Enter your Skills here...." 
+                  class="form-control"
+                  rows="3"></textarea>
+                
+
+
+
+
+ 
+ 
+            </div>
+        </div>
+        <div class="container text-center mt-3 mb-2">
+          <button  onclick="generateResume()" class="btn btn-primary btn-lg">Generate Resume</button>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- CV TEMPLATE -->
+    
+    
+    <div class="conatiner" id="cv-template">
+      <div class="row">
+        <div class="col-md-4 text-center py-4 background">
+          <!-- first Column -->
+          <img src="https://campussafetyconference.com/wp-content/uploads/2020/08/iStock-476085198.jpg" alt="Profile"
+            class="img-fluid myimg"
+            id="imgFieldT" />
+          <div class="container">
+            <p id="nameT1">Aniket Ramker Jaiswal</p>
+            <p id="contactT">+919853001151,+919322771436</p>
+            <p id="addressT">Parma Niwas Shivkrupa housing society Morewasti Chikhali Pune-14</p>
+            <hr />
+            <p><a id="emailFieldT" href="#1">jaiswalaniket115@gmail.com</a></p>
+            <p><a id="linkedFieldT" href="#2">https://www.linkedin.com/in/aniket-jaiswal-650144342</a></p>
+            <hr />
+            <p id="hobbiesFieldT">Reading Books,Singing,Dancing</p>
+
+          </div>
+        </div>
+        <div class="col-md-8">
+          <!-- second column -->
+          <h1 id="nameT2" class="text-center py-4" style="font-weight: 980; ">Aniket Ramker Jaiswal</h1>
+          
+          <!-- objective card -->
+          <div class="card" mt-4>
+            <div class="card-header background">
+              <h3>Personal Objective</h3>
+            </div>
+            <div class="card-body">
+              <p id="objFieldT">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse reiciendis excepturi aliquam
+                 fugit rerum distinctio laboriosam, architecto ullam dolores? Porro voluptate dolorum perferendis
+                  non enim quis eius iste eligendi tempora aperiam labore ipsam cum, reiciendis perspiciatis rem 
+                  deserunt. Repellat quidem nisi eveniet expedita id laborum culpa quo corrupti natus tempora!
+               </p>
+            </div>
+          </div>
+
+          <!-- Academic Quali -->
+
+          <div class="card" mt-4>
+            <div class="card-header background">
+              <h3>Academic Qualifications</h3>
+            </div>
+            <div class="card-body">
+              <ul id="aqFieldT">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, delectus.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, delectus.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, delectus.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- work expi -->
+
+          <div class="card" mt-4>
+            <div class="card-header background">
+              <h3>Work Experience/Internships</h3>
+            </div>
+            <div class="card-body">
+              <ul id="weFieldT">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, delectus.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, delectus.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, delectus.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!--Projects  -->
+
+              <div class="card" mt-4>
+                <div class="card-header background">
+                  <h3>Projects</h3>
+                </div>
+                <div class="card-body">
+                 <ul id="pdFieldT">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis autem optio aliquid, quibusdam 
+                    laborum repudiandae dolorum aspernatur excepturi esse laboriosam.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis autem optio aliquid, quibusdam laborum repudiandae
+                    dolorum aspernatur excepturi esse laboriosam.</li>
+                 </ul>
+                </div>
+              </div>
+
+              <!--skills -->
+
+              <div class="card" mt-4>
+                <div class="card-header background">
+                  <h3>Skills</h3>
+                </div>
+                <div class="card-body">
+                 <p id="skillT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid molestias odio accusantium 
+                  cupiditate quasi facilis maiores culpa distinctio? Deserunt, nesciunt.</p>
+                </div>
+              </div>
+
+
+              <div class="container mt-3 text-center">
+                <button onclick="printResume()" class="btn background">
+                  Print Resume
+                </button>
+              </div>
+
+            </div>
+
+      </div>
+    </div>
+
+
+
+
+
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"> </script>
+  </body>
+</html>
